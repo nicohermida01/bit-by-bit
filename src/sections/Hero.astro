@@ -1,0 +1,30 @@
+---
+import BrandIcon from '@/components/BrandIcon.astro'
+import InstagramIcon from '@/components/InstagramIcon.astro'
+import XIcon from '@/components/XIcon.astro'
+
+const brandIconSize = '128'
+---
+
+<section class='bg-theme-hero-bg-light py-40'>
+	<div class='w-5xl mx-auto'>
+		<div class='flex items-center gap-6 justify-center'>
+			<BrandIcon width={brandIconSize} height={brandIconSize} />
+			<div>
+				<h1 class='font-bold text-6xl'>Bit by Bit</h1>
+				<p class='text-xl mt-2 text-zinc-600'>
+					Conviertete en un programador paso a paso
+				</p>
+			</div>
+		</div>
+
+		<!-- <div class='flex items-center justify-center gap-2 mt-4'>
+			<a href='#'>
+				<InstagramIcon />
+			</a>
+			<a href='#'>
+				<XIcon />
+			</a>
+		</div> -->
+	</div>
+</section>

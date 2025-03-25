@@ -1,0 +1,21 @@
+---
+import { format } from 'date-fns'
+import { es } from 'date-fns/locale'
+import { capitalize } from '@/lib/capitalize'
+
+const { img, title, description, publishedAt, slug } = Astro.props
+
+const fecha = new Date(publishedAt)
+const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
+---
+
+<a href={`/article/${slug}`}>
+	<article>
+		<div class='w-full overflow-hidden rounded-lg'>
+			<img src={`/images/${img}`} alt={title} class='w-full rounded-lg' />
+		</div>
+		<p class='text-xs my-3 text-zinc-600'>{capitalize(formattedDate)}</p>
+		<h3 class='font-bold text-xl'>{title}</h3>
+		<p class='text-sm text-zinc-600 mt-3'>{description}</p>
+	</article>
+</a>

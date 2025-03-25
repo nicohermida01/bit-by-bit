@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content'
+import Post from '@/components/Post.astro'
+
+const articles = await getCollection('articles')
+---
+
+<main class='bg-theme-articles-bg-light'>
+	<div class='w-5xl mx-auto py-8'>
+		<div class='grid grid-cols-3 gap-8'>
+			{
+				articles.map(article => {
+					const { slug, data } = article
+
+					return <Post {...data} slug={slug} />
+				})
+			}
+		</div>
+	</div>
+</main>

@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-theme-hero-bg-light: #fafafa;
+	--color-theme-hero-bg-dark: #18181b;
+
+	--color-theme-articles-bg-light: #ffffff;
+	--color-theme-articles-bg-dark: #242426;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Space Grotesk Variable', sans-serif;
+}
+
+article > div > img {
+	transition: transform 0.3s ease;
+}
+
+article > div > img:hover {
+	transform: scale(1.1);
+}
