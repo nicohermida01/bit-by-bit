@@ -12,7 +12,12 @@ const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
 <a href={`/article/${slug}`}>
 	<article>
 		<div class='w-full overflow-hidden rounded-lg'>
-			<img src={`/images/${img}`} alt={title} class='w-full rounded-lg' />
+			<img
+				src={`/images/${img}`}
+				alt={title}
+				class='w-full rounded-lg'
+				transition:name={`img-${slug}`}
+			/>
 		</div>
 		<p class='text-xs my-3 text-zinc-600'>{capitalize(formattedDate)}</p>
 		<h3 class='font-bold text-xl'>{title}</h3>

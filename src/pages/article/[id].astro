@@ -1,0 +1,35 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getCollection, render } from 'astro:content'
+
+export async function getStaticPaths() {
+	const articles = await getCollection('articles')
+	return articles.map(article => ({
+		params: { id: article.slug },
+		props: { article },
+	}))
+}
+
+const { article } = Astro.props
+const { data, slug } = article
+const { title, img } = data
+
+const { Content } = await render(article)
+---
+
+<Layout title={`${title} - Bit by Bit`}>
+	<main class='w-5xl mx-auto py-8'>
+		<div class='flex flex-col items-center'>
+			<img
+				src={`/images/${img}`}
+				alt={title}
+				class='rounded-lg w-[70%]'
+				transition:name={`img-${slug}`}
+			/>
+			<h1 class='text-4xl font-bold my-4'>{title}</h1>
+		</div>
+		<div class='prose max-w-none'>
+			<Content />
+		</div>
+	</main>
+</Layout>
