@@ -1,6 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import { format } from 'date-fns'
+import { es } from 'date-fns/locale'
 import { getCollection, render } from 'astro:content'
+import { capitalize } from '@/lib/capitalize'
 
 export async function getStaticPaths() {
 	const articles = await getCollection('articles')
@@ -12,23 +15,56 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props
 const { data, slug } = article
-const { title, img } = data
+const { title, img, description, publishedAt, lastUpdate } = data
 
 const { Content } = await render(article)
+
+const plublishedDate = new Date(publishedAt)
+const formattedPublishedDate = format(plublishedDate, 'MMMM dd, yyyy', {
+	locale: es,
+})
+
+const lastUpdateDate = new Date(lastUpdate)
+const formattedLastUpdateDate = format(lastUpdateDate, 'MMMM dd, yyyy', {
+	locale: es,
+})
 ---
 
-<Layout title={`${title} - Bit by Bit`}>
+<Layout title={`Bit by Bit - ${title}`}>
 	<main class='w-5xl mx-auto py-8'>
-		<div class='flex flex-col items-center'>
-			<img
-				src={`/images/${img}`}
-				alt={title}
-				class='rounded-lg w-[70%]'
-				transition:name={`img-${slug}`}
-			/>
-			<h1 class='text-4xl font-bold my-4'>{title}</h1>
+		<div
+			class='w-full flex items-center justify-between mb-[70px] bg-slate-100 p-[20px] rounded-[10px] shadow-md'
+		>
+			<div class='max-w-[600px]'>
+				<h1 class='text-2xl font-bold'>{title}</h1>
+				<p class='my-[10px]'>{description}</p>
+				<div class='text-sm text-gray-700'>
+					<p>
+						Fecha de publicación: <span class='text-gray-400'
+							>{capitalize(formattedPublishedDate)}</span
+						>
+					</p>
+					<p>
+						Última actualización: <span class='text-gray-400'
+							>{capitalize(formattedLastUpdateDate)}</span
+						>
+					</p>
+				</div>
+			</div>
+
+			<div class='w-[300px] h-[200px] rounded-lg'>
+				<img
+					src={`/images/${img}`}
+					alt={title}
+					height='200'
+					width='300'
+					class='rounded-lg'
+					transition:name={`img-${slug}`}
+				/>
+			</div>
 		</div>
-		<div class='prose max-w-none'>
+
+		<div class='prose max-w-none w-full'>
 			<Content />
 		</div>
 	</main>

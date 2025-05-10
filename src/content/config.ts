@@ -6,6 +6,7 @@ const articlesCollection = defineCollection({
 		img: z.string(),
 		description: z.string(),
 		publishedAt: z.date(),
+		lastUpdate: z.date(),
 	}),
 })
 

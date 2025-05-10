@@ -9,18 +9,22 @@ const fecha = new Date(publishedAt)
 const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
 ---
 
-<a href={`/article/${slug}`}>
-	<article>
-		<div class='w-full overflow-hidden rounded-lg'>
+<a href={`/article/${slug}`} class='inline-block'>
+	<article class='w-[300px] h-[500px] rounded-lg overflow-hidden'>
+		<div class='w-full h-[200px] overflow-hidden rounded-lg'>
 			<img
 				src={`/images/${img}`}
 				alt={title}
-				class='w-full rounded-lg'
+				height='200'
+				width='300'
+				class='rounded-lg'
 				transition:name={`img-${slug}`}
 			/>
 		</div>
 		<p class='text-xs my-3 text-zinc-600'>{capitalize(formattedDate)}</p>
 		<h3 class='font-bold text-xl'>{title}</h3>
-		<p class='text-sm text-zinc-600 mt-3'>{description}</p>
+		<p class='text-sm text-zinc-600 mt-3 max-h-[200px]'>
+			{description}
+		</p>
 	</article>
 </a>

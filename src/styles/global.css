@@ -2,15 +2,21 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--color-theme-hero-bg-light: #fafafa;
-	--color-theme-hero-bg-dark: #18181b;
+	--color-primary: #326fcb;
+	--color-secondary: #b8e986;
 
-	--color-theme-articles-bg-light: #ffffff;
+	/* Dark theme */
+	--color-theme-hero-bg-dark: #18181b;
 	--color-theme-articles-bg-dark: #242426;
+
+	/* White theme */
+	--color-theme-hero-bg-light: #fafafa;
+	--color-theme-articles-bg-light: #ffffff;
 }
 
 body {
 	font-family: 'Poppins', sans-serif;
+	width: 100%;
 }
 
 h1,
