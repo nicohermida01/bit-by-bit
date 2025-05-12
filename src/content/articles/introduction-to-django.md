@@ -3,12 +3,14 @@ title: Introducción a Django
 description: '¿Querés aprender a crear sitios web con Python? En este artículo te explico paso a paso qué es Django, cómo instalarlo y cómo construir tus primeras aplicaciones web de forma rápida y profesional. Ideal para principiantes que quieren empezar en el mundo del desarrollo backend con herramientas reales.'
 img: introduction-to-django.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-11
+lastUpdate: 2025-05-12
 ---
 
 ## 📘 ¿Qué es Django?
 
 Django es un **framework de desarrollo web para Python** que permite construir aplicaciones de manera rápida, segura y escalable. Fue creado por desarrolladores experimentados que buscaban una forma más eficiente de desarrollar sitios web sin reinventar la rueda en cada proyecto.
+
+Django es ideal para construir sitios web completos, APIs o incluso servicios backend para aplicaciones móviles.
 
 Sus principios lo dicen todo:
 
@@ -20,27 +22,7 @@ Sus principios lo dicen todo:
 
 > 🌐 **Página oficial**: https://www.djangoproject.com
 
----
-
-## 🎯 ¿Para qué se usa Django?
-
-Django es ideal para construir sitios web completos, APIs o incluso servicios backend para aplicaciones móviles.
-
-**Casos de uso comunes**:
-
-- Blogs o portales de noticias.
-- Tiendas en línea.
-- Aplicaciones empresariales.
-- Sistemas de gestión interna.
-- APIs RESTful (junto con Django REST Framework).
-
-**Ventajas principales**:
-
-- Gran cantidad de funcionalidades listas para usar.
-- Enfoque en la reutilización de componentes.
-- Comunidad activa y excelente documentación.
-
----
+<br /><br />
 
 ## ⚙️ Instalación y configuración inicial
 
@@ -73,7 +55,7 @@ python manage.py runserver
 
 Si todo salió bien, deberías ver el servidor de django corriendo en `http://127.0.0.1:8000`.
 
----
+<br /><br />
 
 ## 🏗️ Conceptos fundamentales
 
@@ -85,7 +67,7 @@ Django sigue el patrón **MTV (Model-Template-View)**:
 
 Dentro del proyecto, podés crear múltiples apps. Cada app es un módulo que cumple una función específica. Por ejemplo, una app para manejar usuarios, otra para productos, etc.
 
----
+<br /><br />
 
 ## 🧰 Utilidades que incluye Django
 
@@ -96,7 +78,7 @@ Django incluye muchas herramientas integradas que te ahorran tiempo:
 - **Sistema de URLs**: rutas limpias y expresivas.
 - **Middleware**: lógica que se ejecuta entre cada solicitud/respuesta.
 
----
+<br /><br />
 
 ## 🛠️ Crear una aplicación paso a paso
 
@@ -128,7 +110,7 @@ python manage.py migrate
 
 Ahora tendremos una carpeta `blog` dentro de nuestro proyecto, donde vamos a encontrar los archivos necesarios para definir nuestros modelos, vistas y urls.
 
----
+<br /><br />
 
 ## ⚙️ Instalar dependencias
 
@@ -186,7 +168,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 ```
 
----
+<br /><br />
 
 ## 📦 Crear un modelo
 
@@ -217,7 +199,7 @@ python manage.py makemigrations blog
 python manage.py migrate
 ```
 
----
+<br /><br />
 
 ## 🔄 Crear un Serializer
 
@@ -238,7 +220,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = '__all__'  # Esto incluye todos los campos del modelo
 ```
 
----
+<br /><br />
 
 ## 🖥️ Crear una vista
 
@@ -259,7 +241,7 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
 ```
 
----
+<br /><br />
 
 ## 📡 Crear una ruta
 
@@ -294,7 +276,7 @@ urlpatterns = [
 ]
 ```
 
----
+<br /><br />
 
 ## 🔐 Administración y panel admin
 
@@ -317,7 +299,53 @@ admin.site.register(Post)
 
 3. Acceder a `http://127.0.0.1:8000/admin`, iniciar sesión con el superusuario y podrás gestionar tus modelos desde el panel de administración.
 
----
+<br /><br />
+
+## Documentación de la API
+
+Para documentar tu API, estaremos usando **coreapi**. Esto es opcional, pero es una buena práctica. Coreapi es una herramienta que te permite crear documentación interactiva para tu API.
+
+1. Instalamos coreapi:
+
+```bash
+pip install coreapi
+```
+
+2. Agregamos coreapi a `INSTALLED_APPS`:
+
+```python
+# mi_proyecto/settings.py
+INSTALLED_APPS = [
+    ...
+    'coreapi',
+    ...
+]
+```
+
+3. Agregamos las rutas de coreapi a `urls.py` dentro de la app `blog`:
+
+```python
+# blog/urls.py
+from rest_framework.documentation import include_docs_urls
+
+urlpatterns = [
+    # path('blog/', include(router.urls)),
+    path('docs/', include_docs_urls(title='Blog API')),  # Esto incluye la documentación de la API
+]
+```
+
+4. Agregamos AutoSchema a `settings.py`:
+
+```python
+# mi_proyecto/settings.py
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
+```
+
+Y listo, ahora podrás acceder a la documentación de tu API `/docs` y ver todas las rutas y métodos disponibles.
+
+<br /><br />
 
 ## 🌐 Django en el mundo real
 

@@ -6,19 +6,19 @@ publishedAt: 2025-05-09
 lastUpdate: 2025-05-09
 ---
 
-# 📘 Introducción a SQL: Consultas paso a paso para principiantes
+## 📘 Introducción a SQL: Consultas paso a paso para principiantes
 
 SQL (Structured Query Language) es el lenguaje estándar que se utiliza para interactuar con bases de datos relacionales. Con SQL podemos consultar, insertar, actualizar y eliminar datos de una base de datos, lo que lo convierte en una herramienta esencial para desarrolladores, analistas de datos y administradores de sistemas.
 
 Muchas aplicaciones modernas dependen de bases de datos para funcionar correctamente. Sistemas como MySQL, PostgreSQL, SQLite y SQL Server utilizan SQL como lenguaje principal de consulta. Aprender SQL no solo te permite entender cómo las aplicaciones almacenan y recuperan información, sino que también es una habilidad muy valorada en el mundo laboral.
 
----
+<br /><br />
 
-# 🛠️ Primeros pasos con SQL
+## 🛠️ Primeros pasos con SQL
 
 Antes de escribir consultas, es importante entender qué es una base de datos relacional: se trata de un conjunto de tablas relacionadas entre sí. Cada tabla contiene filas (registros) y columnas (campos), similares a una hoja de cálculo.
 
-## Crear una base de datos y una tabla
+### Crear una base de datos y una tabla
 
 ```sql
 CREATE DATABASE tienda;
@@ -35,9 +35,9 @@ CREATE TABLE productos (
 
 Con estas instrucciones estamos creando una base de datos llamada `tienda` y una tabla llamada `productos` con algunos campos básicos.
 
----
+<br /><br />
 
-# 🔍 Consultas básicas
+## 🔍 Consultas básicas
 
 La consulta más común en SQL es `SELECT`, que se utiliza para recuperar datos de una tabla.
 
@@ -54,9 +54,9 @@ SELECT * FROM productos WHERE precio < 100;
 
 Esto nos devuelve todos los productos cuyo precio es menor a 100.
 
----
+<br /><br />
 
-# 📊 Filtrar y ordenar datos
+## 📊 Filtrar y ordenar datos
 
 El uso de `ORDER BY` nos permite ordenar los resultados de una consulta. Podemos ordenar por una o más columnas y especificar el orden (ascendente o descendente).
 
@@ -76,13 +76,13 @@ También podemos usar operadores lógicos para hacer búsquedas más complejas:
 SELECT * FROM productos WHERE precio < 100 AND stock > 0;
 ```
 
----
+<br /><br />
 
-# 📈 Funciones de agregación
+## 📈 Funciones de agregación
 
 Las funciones de agregación en SQL permiten realizar cálculos sobre un conjunto de filas y devolver un solo valor. Son especialmente útiles para generar reportes o estadísticas simples desde la base de datos.
 
-## Principales funciones:
+### Principales funciones:
 
 - `COUNT()`: cuenta la cantidad de filas.
 - `SUM()`: suma los valores de una columna.
@@ -112,20 +112,20 @@ Estas funciones también pueden combinarse con WHERE para aplicar filtros:
 SELECT SUM(stock) FROM productos WHERE precio < 50;
 ```
 
----
+<br /><br />
 
-# ✏️ Insertar, actualizar y eliminar datos
+## ✏️ Insertar, actualizar y eliminar datos
 
 Además de consultar datos, con SQL también podemos modificar el contenido de la base de datos.
 
-## Insertar un nuevo producto
+### Insertar un nuevo producto
 
 ```sql
 INSERT INTO productos (nombre, precio, stock)
 VALUES ('Teclado', 45.99, 10);
 ```
 
-## Actualizar información
+### Actualizar información
 
 ```sql
 UPDATE productos
@@ -133,7 +133,7 @@ SET stock = 20
 WHERE nombre = 'Teclado';
 ```
 
-## Eliminar un producto
+### Eliminar un producto
 
 ```sql
 DELETE FROM productos

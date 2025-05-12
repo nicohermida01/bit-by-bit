@@ -35,3 +35,27 @@ article > div > img {
 article > div > img:hover {
 	transform: scale(1.1);
 }
+
+pre {
+	overflow: auto;
+	position: relative;
+}
+
+.copy-button {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	background: #333;
+	color: #fff;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.75rem;
+	border-radius: 4px;
+	cursor: pointer;
+	z-index: 10;
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+}
+
+.copy-button:hover {
+	opacity: 1;
+}

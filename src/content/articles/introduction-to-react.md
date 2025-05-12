@@ -14,7 +14,7 @@ React se ha convertido en una herramienta clave en el desarrollo frontend modern
 
 > 🌐 **Página oficial**: https://es.react.dev/
 
----
+<br /><br />
 
 ## ⚙️ Primeros pasos: creando tu primer proyecto en React
 
@@ -40,7 +40,7 @@ npm start
 
 Ambos métodos generan una estructura de archivos con todo lo necesario para empezar.
 
----
+<br /><br />
 
 ## 🧩 Entendiendo JSX: escribir HTML dentro de JavaScript
 
@@ -56,7 +56,7 @@ Aunque parece HTML, este código es transformado internamente por React en llama
 
 > 💡 **Tip**: JSX siempre debe devolver un solo elemento padre (por eso usamos un `div` o un fragmento `<> </>` si necesitamos agrupar varios).
 
----
+<br /><br />
 
 ## 🧱 Componentes: la base de toda aplicación React
 
@@ -78,7 +78,7 @@ Y se usa como si fuera una etiqueta HTML personalizada:
 
 Este enfoque modular permite dividir la UI en partes independientes que pueden desarrollarse, probarse y reutilizarse fácilmente.
 
----
+<br /><br />
 
 ## 📨 Props: cómo los componentes se comunican entre sí
 
@@ -95,7 +95,7 @@ function Saludo(props) {
 
 Esto hace que los componentes sean más dinámicos y reutilizables, ya que pueden comportarse distinto dependiendo de la información que reciban.
 
----
+<br /><br />
 
 ## 🔁 Estado con `useState`: haciendo que tu UI reaccione
 
@@ -116,7 +116,7 @@ function Contador() {
 
 Cada vez que actualizamos el estado, el componente se vuelve a renderizar con el nuevo valor.
 
----
+<br /><br />
 
 ## 🖱️ Eventos en React: manejar interacciones del usuario
 
@@ -134,7 +134,7 @@ function Boton() {
 
 También es común usar funciones flecha directamente en el JSX.
 
----
+<br /><br />
 
 ## 🧪 Renderizado condicional: mostrar u ocultar contenido
 
@@ -152,7 +152,7 @@ A veces necesitamos mostrar contenido solo bajo ciertas condiciones. En React, e
 
 Esto permite interfaces más dinámicas y adaptadas a distintos estados o datos.
 
----
+<br /><br />
 
 ## 📋 Listas y keys: renderizando múltiples elementos
 
@@ -170,7 +170,7 @@ const tareas = ['Estudiar', 'Practicar', 'Descansar']
 
 > ⚠️ Aunque se puede usar el índice como key (`i`), lo ideal es usar un identificador único real si está disponible.
 
----
+<br /><br />
 
 ## 🧠 Hooks esenciales: `useState` y `useEffect`
 
@@ -186,7 +186,7 @@ useEffect(() => {
 
 El segundo parámetro (`[]`) indica cuándo debe ejecutarse el efecto. Un array vacío significa que se ejecuta solo una vez, al montar el componente.
 
----
+<br /><br />
 
 ## 📝 Formularios e inputs controlados en React
 
@@ -204,7 +204,7 @@ Esto permite tener control total sobre los datos ingresados y aplicar validacion
 
 > 💡 **Tip**: existen librerias de npm como React Hook Form o Formik que facilitan la gestión de formularios complejos.
 
----
+<br /><br />
 
 ## 🌐 Llamadas a APIs: cómo obtener datos externos
 
@@ -220,7 +220,7 @@ useEffect(() => {
 
 Este patrón de `useEffect + fetch + useState` es muy común para trabajar con datos remotos.
 
----
+<br /><br />
 
 ## 🧼 Buenas prácticas al escribir código en React
 
