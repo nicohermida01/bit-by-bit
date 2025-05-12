@@ -1,4 +1,4 @@
-import { addCopyButtons } from './copy-code.js'
+import { addCopyButtons } from '/lib/copy-code.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	addCopyButtons()
