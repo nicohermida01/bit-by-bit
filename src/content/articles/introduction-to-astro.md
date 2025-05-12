@@ -20,7 +20,7 @@ Una de sus características más llamativas es que **envía cero JavaScript por 
 - Usa **arquitectura basada en islas (Island Architecture)** para hidratar solo lo necesario.
 - Excelente para sitios de contenido como blogs, portafolios, documentaciones o landing pages.
 
----
+<br /><br />
 
 ## ⚙️ ¿Para qué sirve Astro?
 
@@ -39,7 +39,7 @@ Astro está diseñado especialmente para **sitios donde el contenido es lo más 
 - El blog oficial de Astro
 - Docs de Frameworks como SolidJS
 
----
+<br /><br />
 
 ## 🛠️ Instalación y primer proyecto
 
@@ -59,7 +59,7 @@ npm run dev
 
 ¡Listo! Ya tenés tu primer proyecto Astro corriendo en `http://localhost:4321`.
 
----
+<br /><br />
 
 ## 📦 Componentes y arquitectura
 
@@ -89,7 +89,7 @@ import Boton from '../componentes/Boton.jsx'
 
 Astro renderiza estos componentes solo si es necesario, optimizando el uso de JavaScript.
 
----
+<br /><br />
 
 ## 🌐 Ruteo y páginas
 
@@ -104,7 +104,7 @@ También podés trabajar con rutas dinámicas y pasar parámetros.
 
 - `/src/pages/blog/[slug].astro` → `/blog/mi-primer-post`
 
----
+<br /><br />
 
 ## 🧠 Renderizado inteligente
 
@@ -114,7 +114,7 @@ Astro permite elegir entre diferentes tipos de renderizado según tus necesidade
 - **Server-Side Rendering (SSR)**: útil si necesitás contenido dinámico en el servidor.
 - **Hydration parcial (Island Architecture)**: solo hidrata los componentes interactivos que lo requieren, lo que reduce al mínimo el JS en el cliente.
 
----
+<br /><br />
 
 ## 📂 Integraciones y ecosistema
 

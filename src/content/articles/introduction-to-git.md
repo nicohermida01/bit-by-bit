@@ -14,7 +14,7 @@ Git es un **sistema de control de versiones** distribuido. Su propósito princip
 
 > 🌐 **Página oficial**: https://git-scm.com/
 
----
+<br /><br />
 
 ## 🛠️ Instalación y configuración inicial
 
@@ -33,7 +33,7 @@ git config --global user.email "tucorreo@example.com"
 
 Esto permite que cada commit que hagas esté identificado correctamente.
 
----
+<br /><br />
 
 ## 📁 Crear un repositorio
 
@@ -49,7 +49,7 @@ git init
 
 Este comando crea un repositorio local y un directorio oculto `.git` que Git usa para rastrear cambios.
 
----
+<br /><br />
 
 ## 📄 Seguimiento de archivos
 
@@ -67,7 +67,7 @@ git add archivo.txt      # Añadir al área de staging
 git commit -m "Mensaje"  # Guardar el cambio en el historial
 ```
 
----
+<br /><br />
 
 ## 📜 Historial de cambios
 
@@ -84,7 +84,7 @@ También podés ver detalles más legibles con:
 git log --oneline --graph
 ```
 
----
+<br /><br />
 
 ## 🌿 Trabajar con ramas
 
@@ -98,7 +98,7 @@ git merge nueva-rama          # Une cambios a otra rama
 
 Las ramas son ideales para separar desarrollo, pruebas y producción.
 
----
+<br /><br />
 
 ## 🌐 GitHub y el trabajo remoto
 
@@ -127,7 +127,7 @@ git pull origin main
 
 > GitHub no es la única plataforma para alojar repositorios Git, pero es la más popular y cuenta con muchas características útiles para la colaboración. Otras alternativas incluyen `GitLab` y `Bitbucket`.
 
----
+<br /><br />
 
 ## 🧹 Buenas prácticas
 
@@ -144,7 +144,7 @@ node_modules/
 .DS_Store
 ```
 
----
+<br /><br />
 
 ## 💡 Comandos útiles adicionales
 

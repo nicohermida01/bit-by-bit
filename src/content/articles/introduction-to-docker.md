@@ -16,7 +16,7 @@ Esto asegura que tu app funcione igual en cualquier entorno, eliminando el clás
 
 > 🌐 **Página oficial**: https://www.docker.com/
 
----
+<br /><br />
 
 ## 📦 ¿Por qué usar Docker?
 
@@ -29,7 +29,7 @@ Docker soluciona muchos problemas comunes en el desarrollo:
 
 Es una herramienta clave para desarrolladores backend, DevOps e incluso para frontend que quieren trabajar con APIs o bases de datos locales.
 
----
+<br /><br />
 
 ## 🛠️ Instalación de Docker
 
@@ -47,7 +47,7 @@ docker --version
 docker run hello-world
 ```
 
----
+<br /><br />
 
 ## ⚙️ Conceptos básicos
 
@@ -67,7 +67,7 @@ Archivo donde definís cómo se construye tu imagen (qué instalar, cómo copiar
 
 Repositorio público donde podés descargar imágenes ya hechas (por ejemplo: MySQL, Nginx, Node.js...).
 
----
+<br /><br />
 
 ## 🧪 Primeros comandos
 
@@ -97,7 +97,7 @@ docker images
 docker stop <id_contenedor>
 ```
 
----
+<br /><br />
 
 ## 🧾 Crear un Dockerfile básico
 
@@ -134,7 +134,7 @@ Y la ejecutás:
 docker run -p 3000:3000 mi-app
 ```
 
----
+<br /><br />
 
 ## ⚙️ Docker Compose
 
@@ -161,7 +161,7 @@ Luego corrés todo con:
 docker-compose up
 ```
 
----
+<br /><br />
 
 ## 🚢 Buenas prácticas
 
