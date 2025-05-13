@@ -13,7 +13,7 @@ export function ArticleMenu({ items }) {
 	}
 
 	return (
-		<Dropdown>
+		<Dropdown placement='bottom-end'>
 			<DropdownTrigger>
 				<Button variant='solid'>Menu</Button>
 			</DropdownTrigger>
