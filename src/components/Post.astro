@@ -10,7 +10,9 @@ const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
 ---
 
 <a href={`/article/${slug}`} class='inline-block'>
-	<article class='w-[300px] h-[500px] rounded-lg overflow-hidden'>
+	<article
+		class='w-[300px] h-[500px] rounded-lg overflow-hidden post-article hover:shadow-xl'
+	>
 		<div class='w-full h-[200px] overflow-hidden rounded-lg'>
 			<img
 				src={`/images/${img}`}
@@ -21,10 +23,15 @@ const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
 				transition:name={`img-${slug}`}
 			/>
 		</div>
-		<p class='text-xs my-3 text-zinc-600'>{capitalize(formattedDate)}</p>
-		<h3 class='font-bold text-xl'>{title}</h3>
-		<p class='text-sm text-zinc-600 mt-3 max-h-[200px]'>
-			{description}
-		</p>
+
+		<div class='p-5 overflow-hidden'>
+			<p class='text-xs my-3 text-zinc-600'>{capitalize(formattedDate)}</p>
+			<h3 class='font-bold text-xl'>{title}</h3>
+			<p
+				class='text-sm text-zinc-500 mt-3 overflow-hidden text-ellipsis line-clamp-9'
+			>
+				{description}
+			</p>
+		</div>
 	</article>
 </a>

@@ -3,6 +3,14 @@ import { getCollection } from 'astro:content'
 import Post from '@/components/Post.astro'
 
 const articles = await getCollection('articles')
+
+// sort articles by lastUpdate
+articles.sort((a, b) => {
+	const aDate = new Date(a.data.lastUpdate).getDate()
+	const bDate = new Date(b.data.lastUpdate).getDate()
+
+	return bDate - aDate
+})
 ---
 
 <main class='bg-theme-articles-bg-light w-full'>

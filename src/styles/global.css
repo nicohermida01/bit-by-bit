@@ -18,6 +18,10 @@
 	--color-theme-articles-bg-light: #ffffff;
 }
 
+@utility post-article {
+	transition: all 0.3s ease;
+}
+
 html {
 	scrollbar-gutter: stable;
 }
