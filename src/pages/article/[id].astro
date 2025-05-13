@@ -4,6 +4,7 @@ import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { getCollection, render } from 'astro:content'
 import { capitalize } from '@/lib/capitalize'
+import { ArticleMenu } from '@/components/react/ArticleMenu'
 
 export async function getStaticPaths() {
 	const articles = await getCollection('articles')
@@ -17,7 +18,15 @@ const { article } = Astro.props
 const { data, slug } = article
 const { title, img, description, publishedAt, lastUpdate } = data
 
-const { Content } = await render(article)
+const { Content, headings } = await render(article)
+
+const headings2 = headings.filter(({ depth }) => depth === 2)
+
+const menuItems = headings2.map(({ depth, slug, text }) => {
+	if (depth === 2) {
+		return { slug, text }
+	}
+})
 
 const plublishedDate = new Date(publishedAt)
 const formattedPublishedDate = format(plublishedDate, 'MMMM dd, yyyy', {
@@ -31,7 +40,11 @@ const formattedLastUpdateDate = format(lastUpdateDate, 'MMMM dd, yyyy', {
 ---
 
 <Layout title={`Bit by Bit - ${title}`}>
-	<main class='w-5xl mx-auto py-8'>
+	<main class='w-5xl mx-auto py-8 relative'>
+		<div class='w-5xl mx-auto flex justify-end fixed top-[80px] z-20 px-2'>
+			<ArticleMenu client:load items={menuItems} />
+		</div>
+
 		<div
 			class='w-full flex items-center justify-between mb-[70px] bg-slate-100 p-[20px] rounded-[10px] shadow-md'
 		>
@@ -64,9 +77,6 @@ const formattedLastUpdateDate = format(lastUpdateDate, 'MMMM dd, yyyy', {
 			</div>
 		</div>
 
-		<!-- <div class='prose '>
-			<Content />
-		</div> -->
 		<div class='markdown-body prose max-w-none w-full'><Content /></div>
 	</main>
 </Layout>
