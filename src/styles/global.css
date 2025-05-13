@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+@plugin './hero.ts';
+
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
 
 @theme {
 	--color-primary: #326fcb;
@@ -26,6 +30,10 @@ h4,
 h5,
 h6 {
 	font-family: 'Space Grotesk Variable', sans-serif;
+}
+
+h2 {
+	scroll-margin-top: 100px;
 }
 
 article > div > img {
