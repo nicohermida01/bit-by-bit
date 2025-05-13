@@ -1,5 +1,4 @@
 import { Input } from '@heroui/react'
-import { useState } from 'react'
 
 const SearchIcon = ({
 	size = 24,

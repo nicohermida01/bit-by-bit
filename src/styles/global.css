@@ -16,6 +16,12 @@
 	/* White theme */
 	--color-theme-hero-bg-light: #fafafa;
 	--color-theme-articles-bg-light: #ffffff;
+
+	--breakpoint-xs: 370px;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 720px;
+	--breakpoint-lg: 960px;
+	--breakpoint-xl: 1200px;
 }
 
 @utility post-article {
