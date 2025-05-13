@@ -1,35 +1,12 @@
 ---
-import { Searchbox } from '@/components/react/Searchbox'
 import Layout from '@/layouts/Layout.astro'
-import { getCollection } from 'astro:content'
-import Post from '@/components/Post.astro'
-
-const articles = await getCollection('articles')
-
-// sort articles by lastUpdate
-articles.sort((a, b) => {
-	const aDate = new Date(a.data.lastUpdate).getDate()
-	const bDate = new Date(b.data.lastUpdate).getDate()
-
-	return bDate - aDate
-})
+import { PublicationsList } from '@/components/react/PublicationsList'
 ---
 
 <Layout title='Bit by Bit - Articulos'>
-	<div class='bg-theme-articles-bg-light w-full'>
+	<div class='bg-theme-articles-bg-light w-full min-h-screen'>
 		<div class='w-5xl mx-auto py-[50px]'>
-			<div class='flex justify-center'>
-				<Searchbox />
-			</div>
-			<main class='flex flex-wrap justify-center gap-8 mt-[50px]'>
-				{
-					articles.map(article => {
-						const { slug, data } = article
-
-						return <Post {...data} slug={slug} />
-					})
-				}
-			</main>
+			<PublicationsList client:load />
 		</div>
 	</div>
 </Layout>

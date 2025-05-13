@@ -1,4 +1,5 @@
 import { Input } from '@heroui/react'
+import { useState } from 'react'
 
 const SearchIcon = ({
 	size = 24,
@@ -36,13 +37,17 @@ const SearchIcon = ({
 	)
 }
 
-export function Searchbox() {
+export function Searchbox({ inputValue, handleOnChange }) {
 	return (
-		<Input
-			placeholder='Buscar...'
-			className='w-[400px]'
-			startContent={<SearchIcon size={18} />}
-			type='search'
-		/>
+		<>
+			<Input
+				placeholder='Buscar...'
+				className='w-[400px]'
+				startContent={<SearchIcon size={18} />}
+				type='search'
+				value={inputValue}
+				onChange={({ target }) => handleOnChange(target.value)}
+			/>
+		</>
 	)
 }
