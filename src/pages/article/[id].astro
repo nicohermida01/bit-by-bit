@@ -42,17 +42,21 @@ export const prerender = true
 ---
 
 <Layout title={`Bit by Bit - ${title}`}>
-	<main class='w-5xl mx-auto py-8 relative'>
-		<div class='w-5xl mx-auto flex justify-end fixed top-[80px] z-20 px-2'>
+	<main
+		class='w-[320px] xs:w-[390px] sm:w-[700px] md:w-[800px] lg:w-5xl mx-auto py-8 relative px-5'
+	>
+		<div
+			class='w-[320px] xs:w-[390px] sm:w-[700px] md:w-[800px] lg:w-5xl mx-auto flex justify-end fixed top-[80px] z-20 pr-10'
+		>
 			<ArticleMenu client:load items={menuItems} />
 		</div>
 
 		<div
-			class='w-full flex items-center justify-between mb-[70px] bg-slate-100 p-[20px] rounded-[10px] shadow-md'
+			class='w-full flex flex-col sm:flex-row items-center justify-between gap-2 mb-[70px] bg-slate-100 p-[20px] rounded-[10px] shadow-md'
 		>
-			<div class='max-w-[600px]'>
+			<div class='w-full sm:w-[50%] xl:max-w-[600px]'>
 				<h1 class='text-2xl font-bold'>{title}</h1>
-				<p class='my-[10px]'>{description}</p>
+				<p class='my-[10px] text-xs sm:text-md'>{description}</p>
 				<div class='text-sm text-gray-700'>
 					<p>
 						Fecha de publicación: <span class='text-gray-400'
@@ -67,7 +71,7 @@ export const prerender = true
 				</div>
 			</div>
 
-			<div class='w-[300px] h-[200px] rounded-lg'>
+			<div class='w-[250px] h-[150px] xs:w-[300px] xs:h-[200px] rounded-lg'>
 				<img
 					src={`/images/${img}`}
 					alt={title}
