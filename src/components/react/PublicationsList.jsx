@@ -1,13 +1,15 @@
 import { Searchbox } from '@/components/react/Searchbox'
 import { useEffect, useState } from 'react'
 import { PostPreview } from '@/components/react/PostPreview'
-import { p } from 'framer-motion/client'
+import { CircularProgress } from '@heroui/react'
 
 export function PublicationsList() {
 	const [publications, setPublications] = useState([])
 	const [searchInput, setSearchInput] = useState('')
+	const [isLoading, setIsLoading] = useState(true)
 
 	const fetchArticles = async searchTerm => {
+		setIsLoading(true)
 		const response = await fetch('/api/articles.json', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
@@ -16,6 +18,7 @@ export function PublicationsList() {
 
 		const data = await response.json()
 		setPublications(data)
+		setIsLoading(false)
 	}
 
 	useEffect(() => {
@@ -31,13 +34,15 @@ export function PublicationsList() {
 				<Searchbox inputValue={searchInput} handleOnChange={setSearchInput} />
 			</div>
 			<main className='flex flex-wrap justify-center gap-8 mt-[50px]'>
-				{publications &&
+				{isLoading && <CircularProgress aria-label='Loading...' size='lg' />}
+				{!isLoading &&
+					publications.length > 0 &&
 					publications.map(post => {
 						const { slug, data } = post
 
 						return <PostPreview {...data} slug={slug} key={slug} />
 					})}
-				{publications.length === 0 && (
+				{!isLoading && publications.length === 0 && (
 					<p>
 						No se encontró ningún resultado para:{' '}
 						<span className='bg-secondary inline-block px-2 py-1 rounded-lg ml-1'>
