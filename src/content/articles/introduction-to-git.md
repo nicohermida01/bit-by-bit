@@ -3,7 +3,7 @@ title: Introducción a Git
 description: '¿Recién empezás a programar y no sabés cómo llevar control de tus proyectos? En este artículo vas a aprender paso a paso cómo usar Git, la herramienta de control de versiones más usada del mundo. Desde los primeros comandos hasta buenas prácticas y conexión con GitHub, todo explicado de forma clara y sencilla para que puedas dominarlo sin miedo.'
 img: introduction-to-git.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-09
+lastUpdate: 2025-05-13
 ---
 
 ## 📘 ¿Qué es Git y para qué se usa?
