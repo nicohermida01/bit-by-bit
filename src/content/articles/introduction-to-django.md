@@ -301,7 +301,7 @@ admin.site.register(Post)
 
 <br /><br />
 
-## Documentación de la API
+## 📚 Documentación de la API
 
 Para documentar tu API, estaremos usando **coreapi**. Esto es opcional, pero es una buena práctica. Coreapi es una herramienta que te permite crear documentación interactiva para tu API.
 
