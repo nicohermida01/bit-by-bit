@@ -5,6 +5,8 @@ import rehypePrettyCode from 'rehype-pretty-code'
 
 import react from '@astrojs/react'
 
+import vercel from '@astrojs/vercel'
+
 // https://astro.build/config
 export default defineConfig({
 	vite: {
@@ -31,4 +33,11 @@ export default defineConfig({
 	},
 
 	integrations: [react({ include: ['**/react/*'] })],
+
+	output: 'server',
+	adapter: vercel({
+		webAnalytics: {
+			enabled: true,
+		},
+	}),
 })
