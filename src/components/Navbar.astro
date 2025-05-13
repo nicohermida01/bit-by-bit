@@ -1,26 +1,13 @@
 ---
-const navbarSections = [
-	{
-		title: 'Inicio',
-		href: '/',
-	},
-	{
-		title: 'Articulos',
-		href: '/articles',
-	},
-]
+import { NavbarLogo } from '@/components/react/NavbarLogo'
+import { navbarSections } from '@/constants/navbar-sections'
 ---
 
 <header
 	class='w-full fixed top-0 z-20 bg-gray-100 border-b-[1px] border-gray-200'
 >
 	<div class='w-5xl mx-auto flex items-center justify-between py-2'>
-		<img
-			src='/images/byb_logo.png'
-			alt='Bit by Bit Logo'
-			width='50'
-			height='50'
-		/>
+		<NavbarLogo client:load />
 		<nav>
 			<ul class='flex items-center gap-6'>
 				{

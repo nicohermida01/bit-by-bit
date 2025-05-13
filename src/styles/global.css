@@ -18,6 +18,10 @@
 	--color-theme-articles-bg-light: #ffffff;
 }
 
+html {
+	scrollbar-gutter: stable;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	width: 100%;
