@@ -18,13 +18,13 @@ Git es un **sistema de control de versiones** distribuido. Su propósito princip
 
 ## 🛠️ Instalación y configuración inicial
 
-Para comenzar a usar Git, primero necesitás instalarlo:
+1. Para comenzar a usar Git, primero necesitás instalarlo:
 
 - En Windows: [Descargar Git](https://git-scm.com/downloads/win)
 - En macOS: `brew install git`
 - En Linux: `sudo apt install git`
 
-Una vez instalado, es importante configurarlo:
+2. Una vez instalado, es importante configurarlo:
 
 ```bash
 git config --global user.name "Tu Nombre"
@@ -75,7 +75,6 @@ El historial es esencial para entender la evolución de tu proyecto.
 
 ```bash
 git log     # Muestra todos los commits
-git diff    # Muestra los cambios entre versiones
 ```
 
 También podés ver detalles más legibles con:
@@ -91,12 +90,20 @@ git log --oneline --graph
 Las ramas permiten trabajar en funcionalidades sin afectar el código principal. La rama por defecto es **main** (o **master** en versiones antiguas).
 
 ```bash
-git branch nueva-rama         # Crea una rama
-git switch nueva-rama         # Cambia a la rama
-git merge nueva-rama          # Une cambios a otra rama
+git branch                    # Muestra todas las ramas
+git branch nueva-rama         # Crea una rama nueva con el nombre 'nueva-rama'
+git switch rama               # Cambia a una rama
+git merge rama-origen         # Fusiona los cambios de 'rama-origen' en tu rama actual
+git branch -d rama            # Elimina una rama
 ```
 
-Las ramas son ideales para separar desarrollo, pruebas y producción.
+Las ramas son ideales para separar desarrollo (`develop`), pruebas (`testing`) y producción (`main` o `master`).
+
+- Existen comando que permiten aplicar mas de una funcionalidad:
+
+```bash
+git checkout -b nueva-rama # Crea una nueva rama con el nombre 'nueva-rama' y cambia a ella
+```
 
 <br /><br />
 
@@ -113,16 +120,30 @@ git branch -M main
 git push -u origin main
 ```
 
-Para bajar un repositorio existente:
+- Descargar un repositorio existente:
 
 ```bash
 git clone https://github.com/usuario/repo.git
 ```
 
-Y para mantenerlo actualizado:
+- Actualizar tu repo local con cambios del remoto:
 
 ```bash
 git pull origin main
+```
+
+- Subir los cambios:
+
+```bash
+git add .
+git commit -m "Mensaje"
+git push origin main
+```
+
+- Eliminar una rama remota:
+
+```bash
+git push origin --delete nombre-rama
 ```
 
 > GitHub no es la única plataforma para alojar repositorios Git, pero es la más popular y cuenta con muchas características útiles para la colaboración. Otras alternativas incluyen `GitLab` y `Bitbucket`.
@@ -148,8 +169,9 @@ node_modules/
 
 ## 💡 Comandos útiles adicionales
 
-- `git stash`: guarda cambios sin hacer commit, ideal si necesitás cambiar de rama rápido.
+- `git stash`: guarda cambios temporales y limpia el working tree.
+- `git stash pop`: restaura los cambios guardados del stash.
 - `git reset`: deshace cambios recientes.
-- `git revert`: revierte un commit creando uno nuevo.
+- `git revert <hash>`: revierte un commit creando uno nuevo.
 - `git log --stat`: muestra estadísticas de los cambios por archivo.
-- `git show`: muestra los detalles de un commit.
+- `git show <hash>`: muestra los detalles de un commit (hash).
