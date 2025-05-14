@@ -8,7 +8,7 @@ export function PostPreview({ img, title, description, publishedAt, slug }) {
 
 	return (
 		<a href={`/article/${slug}`} className='inline-block'>
-			<article className='w-[300px] h-[500px] rounded-lg overflow-hidden post-article hover:shadow-xl'>
+			<article className='w-full sm:w-[300px] h-[500px] rounded-lg overflow-hidden post-article hover:shadow-xl'>
 				<div className='w-full h-[200px] overflow-hidden rounded-lg'>
 					<img
 						src={`/images/${img}`}
