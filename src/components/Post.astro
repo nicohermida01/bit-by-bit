@@ -13,7 +13,9 @@ const formattedDate = format(fecha, 'MMMM dd, yyyy', { locale: es })
 	<article
 		class='w-full sm:w-[300px] h-[500px] rounded-lg overflow-hidden post-article hover:shadow-xl'
 	>
-		<div class='w-full h-[200px] overflow-hidden rounded-lg flex items-center'>
+		<div
+			class='w-full h-[200px] overflow-hidden rounded-lg flex justify-center'
+		>
 			<img
 				src={`/images/${img}`}
 				alt={title}
