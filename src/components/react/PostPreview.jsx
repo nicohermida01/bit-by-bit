@@ -24,7 +24,7 @@ export function PostPreview({ img, title, description, publishedAt, slug }) {
 					<p className='text-xs my-3 text-zinc-600'>
 						{capitalize(formattedDate)}
 					</p>
-					<h3 className='font-bold text-xl'>{title}</h3>
+					<h3 className='font-bold text-xl text-nowrap truncate'>{title}</h3>
 					<p className='text-sm text-zinc-500 mt-3 overflow-hidden text-ellipsis line-clamp-9'>
 						{description}
 					</p>

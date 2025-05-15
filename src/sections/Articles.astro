@@ -6,8 +6,8 @@ const articles = await getCollection('articles')
 
 // sort articles by lastUpdate
 articles.sort((a, b) => {
-	const aDate = new Date(a.data.lastUpdate).getDate()
-	const bDate = new Date(b.data.lastUpdate).getDate()
+	const aDate = new Date(a.data.publishedAt).getDate()
+	const bDate = new Date(b.data.publishedAt).getDate()
 
 	return bDate - aDate
 })
