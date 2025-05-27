@@ -3,7 +3,7 @@ title: Introducción a Git
 description: '¿Recién empezás a programar y no sabés cómo llevar control de tus proyectos? En este artículo vas a aprender paso a paso cómo usar Git, la herramienta de control de versiones más usada del mundo. Desde los primeros comandos hasta buenas prácticas y conexión con GitHub, todo explicado de forma clara y sencilla para que puedas dominarlo sin miedo.'
 img: introduction-to-git.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-13
+lastUpdate: 2025-05-27
 ---
 
 ## 📘 ¿Qué es Git y para qué se usa?
@@ -12,7 +12,7 @@ Git es un **sistema de control de versiones** distribuido. Su propósito princip
 
 > Git no es lo mismo que GitHub. **Git** es la herramienta, mientras que **GitHub** es una plataforma que aloja repositorios Git de manera remota.
 
-> 🌐 **Página oficial**: https://git-scm.com/
+> 🌐 **Página oficial**: <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git-scm.com</a>
 
 <br /><br />
 
@@ -20,7 +20,7 @@ Git es un **sistema de control de versiones** distribuido. Su propósito princip
 
 1. Para comenzar a usar Git, primero necesitás instalarlo:
 
-- En Windows: [Descargar Git](https://git-scm.com/downloads/win)
+- En Windows: <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener noreferrer">🔗 Descargar Git para Windows</a>
 - En macOS: `brew install git`
 - En Linux: `sudo apt install git`
 
