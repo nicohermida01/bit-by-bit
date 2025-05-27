@@ -103,7 +103,7 @@ docker stop <id_contenedor>
 
 Ejemplo para una app Node.js:
 
-```Dockerfile
+```DockerFile
 # Imagen base
 FROM node:18
 

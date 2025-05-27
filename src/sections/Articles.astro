@@ -1,10 +1,18 @@
 ---
 import { getCollection } from 'astro:content'
 import Post from '@/components/Post.astro'
+import RightArrowIcon from '@/assets/svg/right-arrow.svg'
 
-const articles = await getCollection('articles')
+const homeArticles = [
+	'web-development',
+	'programming-fundamentals',
+	'advanced-programming',
+]
 
-// sort articles by lastUpdate
+const articles = await getCollection('articles', ({ slug }) =>
+	homeArticles.includes(slug)
+)
+
 articles.sort((a, b) => {
 	const aDate = new Date(a.data.publishedAt).getDate()
 	const bDate = new Date(b.data.publishedAt).getDate()
@@ -25,6 +33,13 @@ articles.sort((a, b) => {
 					return <Post {...data} slug={slug} />
 				})
 			}
+		</div>
+		<div class='flex justify-end mt-[50px]'>
+			<a
+				href='/articles'
+				class='flex items-center gap-2 border-1 w-max px-4 py-2 border-primary text-primary cursor-pointer all-articles-btn hover:bg-primary hover:text-white'
+				>Ver todos los artículos <RightArrowIcon class='w-6 h-6' /></a
+			>
 		</div>
 	</div>
 </main>
