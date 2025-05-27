@@ -3,7 +3,7 @@ title: Introducción a Docker
 description: '¿Te gustaría correr tus aplicaciones sin preocuparte por configuraciones, versiones o dependencias? En este artículo te presento Docker, una herramienta clave para cualquier desarrollador moderno. Aprendé desde cero qué es, cómo funciona y cómo crear tus propios contenedores paso a paso.'
 img: introduction-to-docker.jpg
 publishedAt: 2025-05-10
-lastUpdate: 2025-05-10
+lastUpdate: 2025-05-27
 ---
 
 ## 🐳 ¿Qué es Docker?
@@ -14,7 +14,7 @@ Esto asegura que tu app funcione igual en cualquier entorno, eliminando el clás
 
 > Un contenedor es similar a una maquina virtual, pero mas liviano, rapido y distribuible.
 
-> 🌐 **Página oficial**: https://www.docker.com/
+> 🌐 **Página oficial**: <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">docker.com</a>
 
 <br /><br />
 
@@ -33,7 +33,7 @@ Es una herramienta clave para desarrolladores backend, DevOps e incluso para fro
 
 ## 🛠️ Instalación de Docker
 
-1. **Descargá Docker Desktop** desde su [página oficial](https://www.docker.com/products/docker-desktop)
+1. **Descargá Docker Desktop** desde su <a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener noreferrer">🔗 página oficial</a>
 2. Seguí los pasos de instalación.
 3. Verificá que esté funcionando con:
 

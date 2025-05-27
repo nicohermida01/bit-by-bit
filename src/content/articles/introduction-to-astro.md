@@ -3,7 +3,7 @@ title: Introducción a Astro
 description: '¿Querés crear sitios web ultrarrápidos con la mínima cantidad de JavaScript? En este artículo te presento Astro, un framework moderno ideal para construir páginas eficientes, bien estructuradas y con un gran rendimiento. Aprendé desde cero a instalarlo, usar componentes, definir rutas y desplegar tu sitio.'
 img: introduction-to-astro.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-09
+lastUpdate: 2025-05-27
 ---
 
 ## 🚀 ¿Qué es Astro?
@@ -12,7 +12,7 @@ Astro es un **framework moderno para construir sitios web rápidos, ligeros y al
 
 Una de sus características más llamativas es que **envía cero JavaScript por defecto al cliente**, lo que lo convierte en una de las opciones más eficientes para generar páginas estáticas o híbridas.
 
-> 🌐 **Página oficial**: https://astro.build
+> 🌐 **Página oficial**: <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro.build</a>
 
 ### ¿Qué lo hace diferente?
 

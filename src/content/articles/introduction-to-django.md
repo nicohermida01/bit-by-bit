@@ -3,7 +3,7 @@ title: Introducción a Django
 description: '¿Querés aprender a crear sitios web con Python? En este artículo te explico paso a paso qué es Django, cómo instalarlo y cómo construir tus primeras aplicaciones web de forma rápida y profesional. Ideal para principiantes que quieren empezar en el mundo del desarrollo backend con herramientas reales.'
 img: introduction-to-django.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-12
+lastUpdate: 2025-05-27
 ---
 
 ## 📘 ¿Qué es Django?
@@ -20,7 +20,7 @@ Sus principios lo dicen todo:
 - **Extremadamente escalable**: algunos de los sitios mas grandes del mundo utilizan Django para manejar millones de usuarios y peticiones.
 - **Increiblemente versátil**: se puede usar para construir cualquier tipo de aplicación web, desde un simple blog hasta una plataforma de comercio electrónico o una red social.
 
-> 🌐 **Página oficial**: https://www.djangoproject.com
+> 🌐 **Página oficial**: <a href="https://www.djangoproject.com" target="_blank" rel="noopener noreferrer">djangoproject.com</a>
 
 <br /><br />
 
@@ -353,8 +353,8 @@ Una vez que tenés tu aplicación lista, podés desplegarla fácilmente.
 
 Opciones comunes de hosting:
 
-- Render: https://render.com
-- Railway: https://railway.app
-- Heroku: https://heroku.com
+- Render: <a href="https://render.com" target="_blank" rel="noopener noreferrer">render.com</a>
+- Railway: <a href="https://railway.app" target="_blank" rel="noopener noreferrer">railway.app</a>
+- Heroku: <a href="https://heroku.com" target="_blank" rel="noopener noreferrer">heroku.com</a>
 
 También podés combinar Django con Django REST Framework para construir **APIs robustas**.

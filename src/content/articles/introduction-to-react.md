@@ -3,7 +3,7 @@ title: Introducción a React
 description: '¿Querés aprender React desde cero y no sabés por dónde empezar? En esta guía pensada para principiantes vas a descubrir todos los conceptos esenciales de React explicados paso a paso: componentes, props, estado, eventos, hooks y mucho más. Ideal para dar tus primeros pasos en el desarrollo frontend moderno con una base sólida y clara.'
 img: introduction-to-react.jpg
 publishedAt: 2025-05-09
-lastUpdate: 2025-05-09
+lastUpdate: 2025-05-27
 ---
 
 ## ❓ ¿Qué es React y por qué deberías aprenderlo?
@@ -12,7 +12,7 @@ React es una biblioteca de JavaScript creada por Meta (antes Facebook) que permi
 
 React se ha convertido en una herramienta clave en el desarrollo frontend moderno, y es utilizada por empresas como Netflix, Airbnb, Instagram y muchas otras. Aprender React te abre las puertas a construir interfaces interactivas, mantener el código organizado y escalar tus proyectos con facilidad.
 
-> 🌐 **Página oficial**: https://es.react.dev/
+> 🌐 **Página oficial**: <a href="https://es.react.dev/" target="_blank" rel="noopener noreferrer">react.dev</a>
 
 <br /><br />
 
