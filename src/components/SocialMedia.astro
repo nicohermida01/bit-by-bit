@@ -1,0 +1,32 @@
+---
+import Instagram from '@/assets/svg/instagram.svg'
+import X from '@/assets/svg/x.svg'
+import { socialMedia } from '@/constants/social-media'
+
+interface Props {
+	iconSize: number
+}
+
+const { iconSize } = Astro.props
+---
+
+<div class='flex items-center gap-6'>
+	{
+		socialMedia.map(({ title, url, media }) => {
+			return (
+				<a
+					href={url}
+					target='_blank'
+					class='hover:scale-120 transition-all'
+					title={title}
+				>
+					{media === 'instagram' ? (
+						<Instagram width={iconSize} height={iconSize} />
+					) : media === 'x' ? (
+						<X width={iconSize - 4} height={iconSize - 4} />
+					) : null}
+				</a>
+			)
+		})
+	}
+</div>

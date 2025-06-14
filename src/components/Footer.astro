@@ -1,29 +1,54 @@
 ---
-
+import SocialMedia from './SocialMedia.astro'
 ---
 
-<footer class='w-full bg-theme-hero-bg-light border-t-[1px] border-gray-200'>
+<footer class='w-full bg-primary footerShadow'>
 	<div
-		class='w-[320px] xs:w-[390px] sm:w-[700px] md:w-[800px] lg:w-5xl mx-auto p-[40px] flex gap-4 text-xs xs:text-md'
+		class='w-[320px] xs:w-[390px] sm:w-[700px] md:w-[800px] lg:w-5xl mx-auto p-[40px]'
 	>
-		<div class='bg-slate-200 w-max rounded-full p-6'>
-			<img
-				src='/images/byb_logo.png'
-				alt='Bit by Bit Logo'
-				height='100'
-				width='100'
-			/>
-		</div>
-		<div class='w-full flex flex-col items-end justify-end'>
-			<p>
-				Sitio web desarrollado por <a
-					href='https://nicohermida.com'
-					target='_blank'
-					class='underline'
+		<div
+			class='border-b-1 border-white/35 flex flex-col gap-10 sm:flex-row sm:justify-between pb-[55px]'
+		>
+			<div class='bg-slate-200 w-max h-max rounded-full p-6'>
+				<img
+					src='/images/byb_logo.png'
+					alt='Bit by Bit Logo'
+					height='100'
+					width='100'
+				/>
+			</div>
+
+			<div>
+				<h3 class='font-semibold text-[18px] mb-[30px] text-white'>
+					Más información
+				</h3>
+
+				<div
+					class='flex flex-col gap-3 text-[14px] text-white/70 [&>a]:cursor-pointer'
 				>
-					Nico Hermida</a
-				>
-			</p>
+					<a href='/articles' class='hover:underline'>Todos los articulos</a>
+					<a class='line-through'>Sobre Bit by Bit</a>
+					<a class='line-through'>Donar</a>
+				</div>
+			</div>
+
+			<div class='text-white/70'>
+				<h3 class='font-semibold text-[18px] mb-[30px] text-white'>
+					Redes sociales
+				</h3>
+
+				<SocialMedia iconSize={24} />
+			</div>
 		</div>
+
+		<p class='mt-[30px] text-center text-[14px] text-white'>
+			© 2025 Bit by Bit | Todos los derechos reservados
+		</p>
 	</div>
 </footer>
+
+<style>
+	.footerShadow {
+		box-shadow: 0px -10px 18px -2px rgba(0, 0, 0, 0.25);
+	}
+</style>

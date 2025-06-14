@@ -11,6 +11,9 @@ import vercel from '@astrojs/vercel'
 export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
+		server: {
+			allowedHosts: ['18fb-181-231-169-231.ngrok-free.app'],
+		},
 	},
 
 	markdown: {
