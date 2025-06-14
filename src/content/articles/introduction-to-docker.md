@@ -4,6 +4,7 @@ description: '¿Te gustaría correr tus aplicaciones sin preocuparte por configu
 img: introduction-to-docker.jpg
 publishedAt: 2025-05-10
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 🐳 ¿Qué es Docker?

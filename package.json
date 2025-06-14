@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@astrojs/vercel": "^8.1.4",
+    "@astrojs/vercel": "^8.1.5",
     "@fontsource-variable/fira-code": "^5.2.5",
     "@fontsource-variable/space-grotesk": "^5.2.6",
     "@fontsource/poppins": "^5.2.5",
@@ -18,7 +18,7 @@
     "@tailwindcss/vite": "^4.0.15",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.4",
-    "astro": "^5.8.0",
+    "astro": "^5.9.3",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.11.0",
     "github-markdown-css": "^5.8.1",

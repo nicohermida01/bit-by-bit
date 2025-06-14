@@ -4,6 +4,7 @@ description: '¿Querés aprender React desde cero y no sabés por dónde empezar
 img: introduction-to-react.jpg
 publishedAt: 2025-05-09
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## ❓ ¿Qué es React y por qué deberías aprenderlo?

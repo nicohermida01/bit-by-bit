@@ -4,6 +4,7 @@ description: '¿Recién empezás a programar y no sabés cómo llevar control de
 img: introduction-to-git.jpg
 publishedAt: 2025-05-09
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 📘 ¿Qué es Git y para qué se usa?

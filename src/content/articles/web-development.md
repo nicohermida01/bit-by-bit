@@ -4,6 +4,7 @@ description: '¿Querés aprender desarrollo web pero no sabés por dónde comenz
 img: web-development.jpg
 publishedAt: 2025-05-27
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 🧭 ¿Qué es el Desarrollo Web?

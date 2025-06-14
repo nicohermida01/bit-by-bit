@@ -4,6 +4,7 @@ description: '¿Estás dando tus primeros pasos en el mundo de la programación 
 img: programming-fundamentals.jpg
 publishedAt: 2025-05-15
 lastUpdate: 2025-05-15
+ready: true
 ---
 
 ## 🖥️ Introducción a la Programación

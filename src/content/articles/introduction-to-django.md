@@ -4,6 +4,7 @@ description: '¿Querés aprender a crear sitios web con Python? En este artícul
 img: introduction-to-django.jpg
 publishedAt: 2025-05-09
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 📘 ¿Qué es Django?

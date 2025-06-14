@@ -4,6 +4,7 @@ description: '¿Ya dominás los fundamentos de programación y querés dar el si
 img: advanced-programming.jpg
 publishedAt: 2025-05-15
 lastUpdate: 2025-05-15
+ready: true
 ---
 
 ## 🧠 Introducción

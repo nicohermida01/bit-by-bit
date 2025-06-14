@@ -4,6 +4,7 @@ description: '¿Querés crear sitios web ultrarrápidos con la mínima cantidad 
 img: introduction-to-astro.jpg
 publishedAt: 2025-05-09
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 🚀 ¿Qué es Astro?

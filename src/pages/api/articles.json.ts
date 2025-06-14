@@ -1,9 +1,12 @@
-import type { APIRoute } from 'astro'
 import { getCollection } from 'astro:content'
 
 export async function POST({ request }) {
 	const { search } = await request.json()
-	const articles = await getCollection('articles')
+
+	const articles = await getCollection(
+		'articles',
+		({ data: { ready } }) => ready
+	)
 
 	let filteredArticles = articles
 

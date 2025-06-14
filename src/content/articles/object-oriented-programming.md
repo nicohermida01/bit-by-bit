@@ -4,6 +4,7 @@ description: '¿Te gustaría entender cómo piensan los lenguajes modernos como 
 img: object-oriented-programming.jpg
 publishedAt: 2025-05-15
 lastUpdate: 2025-05-15
+ready: true
 ---
 
 ## 📌 Introducción

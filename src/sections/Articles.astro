@@ -7,10 +7,13 @@ const homeArticles = [
 	'web-development',
 	'programming-fundamentals',
 	'advanced-programming',
+	'javascript',
+	'object-oriented-programming',
 ]
 
-const articles = await getCollection('articles', ({ slug }) =>
-	homeArticles.includes(slug)
+const articles = await getCollection(
+	'articles',
+	({ slug, data: { ready } }) => homeArticles.includes(slug) && ready
 )
 
 articles.sort((a, b) => {

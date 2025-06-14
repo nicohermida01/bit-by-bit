@@ -4,6 +4,7 @@ description: '¿Te interesa crear sitios web dinámicos y llenos de interactivid
 img: javascript.jpg
 publishedAt: 2025-05-27
 lastUpdate: 2025-05-27
+ready: true
 ---
 
 ## 🟨 ¿Qué es JavaScript?

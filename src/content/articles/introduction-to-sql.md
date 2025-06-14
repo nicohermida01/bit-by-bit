@@ -4,6 +4,7 @@ description: '¿Estás empezando con bases de datos? En este artículo te enseñ
 img: introduction-to-sql.jpg
 publishedAt: 2025-05-09
 lastUpdate: 2025-05-09
+ready: true
 ---
 
 ## 📘 Introducción a SQL: Consultas paso a paso para principiantes

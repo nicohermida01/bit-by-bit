@@ -7,6 +7,7 @@ const articlesCollection = defineCollection({
 		description: z.string(),
 		publishedAt: z.date(),
 		lastUpdate: z.date(),
+		ready: z.boolean().default(false),
 	}),
 })
 
